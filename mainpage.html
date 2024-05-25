@@ -13,20 +13,22 @@
 	<link href="https://fonts.googleapis.com/css2?family=Rubik+Pixels&display=swap" rel="stylesheet">
 
 	<script type="text/javascript">
-		// Wait for the DOM to be fully loaded
+		// to avoid this function from operating before the content loads, we added this to make sure the DOM fully loads first
 		document.addEventListener('DOMContentLoaded', function () {
-			let Q1 = "page2.html";
-			document.getElementById('Q1').onclick = function () {
-				window.location.replace(Q1);
+			let Q1 = "page2.html"; // we're not going to be using the href of the navbar for today - instead, we're giving the navbar an id then using that id to assign a function (being that we link the id to a website) here.
+			document.getElementById('Q1').onclick = function () { // we're getting that html id in the navbar named Q1
+				window.location.replace(Q1); // and then BAM we replace it with the page2.html 
 			};
 
-			let Q3 = "page3.html";
-			document.getElementById('Q3').onclick = function () {
-				window.location.replace(Q3);
+			let Q3 = "page3.html"; // assigning the id with a function to link to page3.html
+			document.getElementById('Q3').onclick = function () { // grabbing that Q3 element somewhere in our html code..
+				window.location.replace(Q3); // and then once that navbar is clicked, this is where the assigned fuction comes to play. tada!
 			};
 		});
+
+		// credits to sabanal for helping me with this, I struggled here!
 	</script>
-	
+
 	<style type="text/css">
 
 		body {
